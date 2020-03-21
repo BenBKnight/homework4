@@ -1,0 +1,30 @@
+/* test attributes */
+article {
+    width: 90%;
+    height: 700px;
+    background-color: blue;
+    text-align: center;
+}
+main {
+    margin: 25px;
+    justify-content: center;
+    position: absolute;
+    left: 30%;
+    width: 40%;
+}
+/*.main-content {
+
+}
+*/
+div.col {
+    justify-content: right;
+    text-align: right;
+}
+
+
+
+/* Styles that are going to be used*/
+.btn-primary{
+    background-color: purple;
+    border-style: none;
+}
