@@ -28,3 +28,8 @@ div.col {
     background-color: purple;
     border-style: none;
 }
+button {
+    background-color: purple;
+    border-style: none;
+    color: white;   
+}
