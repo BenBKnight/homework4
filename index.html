@@ -9,25 +9,70 @@
 </head>
 <body class="container-fluid">
     <header class="row">
-        <a href="highscores.html" class="col">View Highscores</a>
-        <div class="col timeRecord">Time: <span id="countdown">0</span></div>
+        <div class="col" id="viewHighscoreTag" onclick="viewHighscoreTag()">View Highscores</a>
+        <div class="col timeRecord">Time: <span id="countdown">0</span><span id="finalTime" class="invisible"></span></div>
     </header>
+
+
     <main class="row">
-        <article class="col main-content">
-            <h2 id="title"></h2>
-            <p id="content1" onclick="a()"></p>
-            <p id="content2" onclick="b()"></p>
-            <p id="content3" onclick="c()"></p>
-            <p id="content4" onclick="d()"></p>
-            <button class="startQuiz btn btn-primary btn-lg" onclick="startCountDown(); startQuiz();">Start Quiz</button>
-        </article>
 
-<!--Coding Quiz Challenge
-Try to answer the following coding-related questions within the time limit.
-Keep in mind that incorrect answers will penalize your score-time by 10 seconds!
--->     
+    <div class="col main-content">
+        <h2 id="title">Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</h2>
+        <button class="startQuiz btn btn-primary btn-lg" onclick="startCountDown(); startQuiz(); showQuestion();">Start Quiz</button>
+    </div> 
 
+    <article id="questionWrapper1" class="invisible">
+        <h3 id="question">Commonly used data types DO NOT include:</h3>
+        <button onclick="answer1()">1: String</button>
+        <button onclick="answer1()">2: Booleans</button>
+        <button onclick="answer1Right()">3: Alerts</button>
+        <button onclick="answer1()">4: Numbers</button>
+    </article>
 
+    <article id="questionWrapper2" class="invisible">
+        <h3 id="question">The condition in a if/else statement is enclosed within _______.</h3>
+        <button onclick="answer2()">1: Quotes</button>
+        <button onclick="answer2()">2: Curly Brackets</button>
+        <button onclick="answer2Right()">3: Parentheses</button>
+        <button onclick="answer2()">4: Square Brackets</button>
+    </article>
+
+    <article id="questionWrapper3" class="invisible">
+        <h3 id="question">Arrays in JavaScript can be used to store _____.</h3>
+        <button onclick="answer3()">1: Number and strings</button>
+        <button onclick="answer3()">2: Other Arrays</button>
+        <button onclick="answer3()">3: Booleans</button>
+        <button onclick="answer3Right()">4: All the above</button>
+    </article>
+
+    <article id="questionWrapper4" class="invisible">
+        <h3 id="question">String values must be enclosed within _______ when being assigned to variables.</h3>
+        <button onclick="answer4()">1: Commas</button>
+        <button onclick="answer4()">2: Curly Brackets</button>
+        <button onclick="answer4Right()">3: Quotes</button>
+        <button onclick="answer4()">4: Parentheses</button>
+    </article>
+
+    <article id="questionWrapper5" class="invisible">
+        <h3 id="question">A very useful tool used during development and debugging for printing content to the debugger is:</h3>
+        <button onclick="answer5()">1: JavaScript</button>
+        <button onclick="answer5()">2: Terminal/bash</button>
+        <button onclick="answer5()">3: For loops</button>
+        <button onclick="answer5Right()">4: Console.log</button>
+    </article>
+
+    <article id="allDone" class="invisible">
+        <h4>All Done!</h4>
+        <p>Your final score: <span id="finalScore"></span></p>
+        <p>Enter initials: <input id="initials"> <button onclick="submitInitials()" class="btn btn-primary ">Submit</button></p>
+    </article>
+
+    <article id="highscorePage" class="invisible">
+        <h2>Highscores</h2>
+        <ol id="highscoreList"></ol>
+        <button style="display: inline;" onclick="location.reload()">Go Back</button>
+        <button style="display: inline;" onclick="clearScores()">Clear</button>
+    </article>
 
     </main>
     <script src="./assets/javascript/script.js"></script>
