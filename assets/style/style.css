@@ -2,8 +2,7 @@
 article {
     width: 90%;
     height: 700px;
-    background-color: blue;
-    text-align: center;
+    
 }
 main {
     margin: 25px;
@@ -13,10 +12,10 @@ main {
     width: 40%;
 }
 /*.main-content {
+    text-align: right;
+}*/
 
-}
-*/
-div.col {
+.timeRecord {
     justify-content: right;
     text-align: right;
 }
@@ -31,5 +30,10 @@ div.col {
 button {
     background-color: purple;
     border-style: none;
-    color: white;   
+    color: white;
+    display: block;
+    margin-top: 15px;   
+}
+.invisible {
+    display: none;
 }

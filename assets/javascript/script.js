@@ -2,13 +2,20 @@
 var time = 75;
 var countDownId = document.getElementById("countdown");
 countDownId.innerText = time
+
 // Variables for quiz
 var title = document.getElementById("title");
-var content1 = document.getElementById("content1");
-var content2 = document.getElementById("content2");
-var content3 = document.getElementById("content3");
-var content4 = document.getElementById("content4");
+var a = document.getElementById("content1");
+var b = document.getElementById("content2");
+var c = document.getElementById("content3");
+var d = document.getElementById("content4");
 var allContent = [content1, content2, content3, content4,]
+
+//var option1 = document.getElementById("content1").addEventListener("click", answered1())
+
+//function answered1 (event) {
+  //  console.log("you did it!")
+//}
 // Objects for questions
 var question1 = {
     question: "Commonly used data types DO NOT include:",
@@ -73,15 +80,16 @@ function countDownFunction () {
     time --;
     countDownId.innerHTML = time
 }
+
 // Function to display questions
 function startQuiz(){
     document.getElementById("title").innerText=[question1.question];
     for (i = 0; i < question1.choices.length; i++) {
         var btn = document.createElement("BUTTON")
         btn.innerText=question1.choices[i];
-        allContent[i].appendChild(btn);
-        console.log(btn)
+        allContent[i].appendChild(btn);    
     }
+    if ()
 
 }
 
