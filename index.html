@@ -15,12 +15,12 @@
 
 
     <main class="row">
-
+                    <!--Title page--> 
     <div class="col main-content">
         <h2 id="title">Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</h2>
-        <button class="startQuiz btn btn-primary btn-lg" onclick="startCountDown(); startQuiz(); showQuestion();">Start Quiz</button>
+        <button class="startQuiz btn btn-primary btn-lg" onclick="startCountDown(); showQuestion();">Start Quiz</button>
     </div> 
-
+                    <!--Question 1--> 
     <article id="questionWrapper1" class="invisible">
         <h3 id="question">Commonly used data types DO NOT include:</h3>
         <button onclick="answer1()">1: String</button>
@@ -28,7 +28,7 @@
         <button onclick="answer1Right()">3: Alerts</button>
         <button onclick="answer1()">4: Numbers</button>
     </article>
-
+                    <!--Question 2--> 
     <article id="questionWrapper2" class="invisible">
         <h3 id="question">The condition in a if/else statement is enclosed within _______.</h3>
         <button onclick="answer2()">1: Quotes</button>
@@ -36,7 +36,7 @@
         <button onclick="answer2Right()">3: Parentheses</button>
         <button onclick="answer2()">4: Square Brackets</button>
     </article>
-
+                    <!--Question 3--> 
     <article id="questionWrapper3" class="invisible">
         <h3 id="question">Arrays in JavaScript can be used to store _____.</h3>
         <button onclick="answer3()">1: Number and strings</button>
@@ -44,7 +44,7 @@
         <button onclick="answer3()">3: Booleans</button>
         <button onclick="answer3Right()">4: All the above</button>
     </article>
-
+                    <!--Question 4--> 
     <article id="questionWrapper4" class="invisible">
         <h3 id="question">String values must be enclosed within _______ when being assigned to variables.</h3>
         <button onclick="answer4()">1: Commas</button>
@@ -52,7 +52,7 @@
         <button onclick="answer4Right()">3: Quotes</button>
         <button onclick="answer4()">4: Parentheses</button>
     </article>
-
+                    <!--Question 5--> 
     <article id="questionWrapper5" class="invisible">
         <h3 id="question">A very useful tool used during development and debugging for printing content to the debugger is:</h3>
         <button onclick="answer5()">1: JavaScript</button>
@@ -60,13 +60,13 @@
         <button onclick="answer5()">3: For loops</button>
         <button onclick="answer5Right()">4: Console.log</button>
     </article>
-
+                    <!--Final Score Page--> 
     <article id="allDone" class="invisible">
         <h4>All Done!</h4>
         <p>Your final score: <span id="finalScore"></span></p>
         <p>Enter initials: <input id="initials"> <button onclick="submitInitials()" class="btn btn-primary ">Submit</button></p>
     </article>
-
+                    <!--High Score Page--> 
     <article id="highscorePage" class="invisible">
         <h2>Highscores</h2>
         <ol id="highscoreList"></ol>

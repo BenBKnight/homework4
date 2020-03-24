@@ -2,21 +2,17 @@
 var time = 75;
 var countDownId = document.getElementById("countdown");
 countDownId.innerText = time
-
 var savedHighscores = []
-
 // Call function and set interval for countdown and hides start button
 function startCountDown (){
     setInterval(countDownFunction, 1000);
     document.querySelector(".main-content").className = "invisible";
-//    document.querySelector(".main-content").parentNode.removeChild(span);
     return; 
 }
 // Actual countdown function
 function countDownFunction () {
     time --;
     countDownId.innerHTML = time
-
 }
 // Reveal Question 1
 function showQuestion (){
@@ -83,20 +79,33 @@ function answer5Right (){
     document.getElementById("finalTime").innerText = time;
     countDownId.className = ("invisible");
 }
+
+// Saves user score and initials 
+var savedHighscores = []
 function submitInitials(){
     var initials = document.getElementById("initials").value;
     document.getElementById("allDone").className = ("invisible");
     document.getElementById("highscorePage").className = ("");
-    var savedHighscores = {initials, time}
+    savedHighscores += (initials + ' ' + time)
     localStorage.setItem("savedHighscores", JSON.stringify(savedHighscores));
-    for (i = 0; i < savedHighscores.length; i++) {
+    console.log(savedHighscores.length)
+    // Create a ordered list element and applies initials and score
+    //for (i = 0; i < savedHighscores.length; i++) {
+    // I was not able to code my for loop to function
         var listItem = document.createElement("li");
-        listItem.innerText = JSON.parse(localStorage.getItem("savedHighscores"));
-        document.getElementById("highscoreList").appendChild(listItem);
+        var showInitials = JSON.parse(localStorage.getItem("savedHighscores"));
+        listItem.innerText = savedHighscores;
 
-        console.log(JSON.parse(localStorage.getItem(savedHighscores)))
-    }
+        document.getElementById("highscoreList").appendChild(listItem);
+        console.log(JSON.parse(localStorage.getItem("savedHighscores")))
+        console.log(savedHighscores.length)
+    console.log(time)
 }
+
+
+
+
+// Takes user to highscore page
 function viewHighscoreTag(){
 
     document.querySelector(".main-content").className = "invisible";
@@ -104,42 +113,9 @@ function viewHighscoreTag(){
     document.getElementById("highscorePage").className = ("");
 
 }
+// Clears local storage and hides list
 function clearScores(){
     localStorage.clear();
     document.getElementById("highscoreList").className = "invisible";
     console.log("This worked")
 }
-
-
-
-localStorage.setItem("apple",99);
-
-
-
-
-
-
-
-
-
-// Function to display questions
-function startQuiz(){
-    
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
