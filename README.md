@@ -20,4 +20,4 @@ Again, this is not my greatest work and I realize that. I am not giving excuses,
 Despite my subpar work, I was able to make a functioning quiz. This is one of the things I will probably come back and improve. I can say that I did this assignment with minimal outside help.
 
 ## Final Look
-![Picture of finished project](./assets/Images/screenshotOfQuiz.png)
+![Picture of finished project](./assets/style/screenshotOfQuiz.png)
